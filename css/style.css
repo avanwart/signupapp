@@ -13,6 +13,16 @@ body {
 .wrapper h1 {
   font-size: 2em;
 }
+.intro {
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.form-group {
+  overflow: auto;
+}
+legend {
+  margin-bottom: 10px;
+}
 label {
   -webkit-font-smoothing: antialiased;
   font-weight: normal;
@@ -21,7 +31,7 @@ label {
   display: inline-block;
   width: 100%;
 }
-.input span {
+.input .placeholder {
   position: absolute;
   font-family: 'Noto Sans', sans-serif;
   font-weight: normal;
@@ -48,4 +58,7 @@ label {
   box-shadow: none;
   background-color: white;
   border: 1px solid #68c9eb;
+}
+.input input:focus .placeholder {
+  display: none;
 }

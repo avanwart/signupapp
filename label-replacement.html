@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple Responsive Signup Form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap CSS -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="css/style.css" media="screen">
+		<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<header class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
+			<div class="container">
+			    <div class="navbar-header">
+			      	<a href="#" class="navbar-brand">Simple Responsive Form</a>
+			    </div>
+			</div>
+		</header>
+		<section id="form">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 wrapper">
+						<form action="">
+							<legend>Backwards Compatible Label Replacement</legend>
+							<p class="intro">For this form we can use some simple JavaScript to simulate placeholder text for older browsers such as IE8 and IE7.</p>
+							<fieldset>
+								<div class="row form-group">
+									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+										<label class="input" for="firstName"><span class="placeholder">First Name</span>
+	                                        <input type="text" id="firstName" class="required" name="firstName" value="">
+	                                    </label>
+	                                </div>
+	                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+										<label class="input" for="lastName"><span class="placeholder">Last Name</span>
+	                                        <input type="text" id="lastName" class="required" name="lastName" value="">
+	                                    </label>
+	                                </div>
+								</div>
+								<div class="row form-group">
+									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+										<label class="input" for="emailAddress"><span class="placeholder">Email Address</span>
+	                                        <input type="email" id="emailAddress" class="required" name="emailAddress" value="">
+	                                    </label>
+	                                </div>
+	                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+										<label class="input" for="emailConfirm"><span class="placeholder">Confirm Email</span>
+	                                        <input type="email" id="emailConfirm" class="required" name="emailConfirm" value="">
+	                                    </label>
+	                                </div>
+								</div>
+								<div class="row form-group">
+									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+										<label class="input" for="phone"><span class="placeholder phone">Phone Number</span>
+	                                        <input type="phone" id="phone" class="required" name="phone" value="">
+	                                    </label>
+	                                </div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="js/jquery.maskedInput.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#phone").mask("(999) 999-9999", { placeholder: " " });
+				$('#phone').focus(function(){
+					$('.phone').hide();
+				});
+				$('#phone').blur(function(){
+					if( $(this).val() == '') {
+						$('.phone').show();
+					}
+				});
+				$("input").blur(function() {
+		            $("#phone").html("Unmasked value: " + $(this).mask());
+		        }).dblclick(function() {
+		            $(this).unmask();
+		        });
+			});
+		</script>
+		<script src="js/labelreplace.js"></script>
+	</body>
+</html>
