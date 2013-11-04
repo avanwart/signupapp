@@ -1,6 +1,6 @@
 body {
   -webkit-font-smoothing: antialiased;
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Droid Sans', sans-serif;
   background: #efefef;
   padding-top: 100px;
   font-size: 16px;
@@ -33,11 +33,10 @@ label {
 }
 .input .placeholder {
   position: absolute;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
-  padding: 6px 12px 6px 13px;
+  padding: 8px 12px 6px 13px;
   color: #bababa;
-  font-size: 1.12em;
   z-index: 1;
   cursor: text;
   pointer-events: none;
@@ -45,9 +44,9 @@ label {
 }
 .input input {
   width: 100%;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
-  padding: 6px 12px 6px 12px;
+  padding: 7px 12px 6px 12px;
   border: 1px solid #dadada;
   background-color: #f6f6f6;
   -webkit-font-smoothing: antialiased;
@@ -88,9 +87,10 @@ label.error:after {
   top: 28px;
   margin-left: -8px;
 }
-.btn {
+.btn-lg {
   border-radius: 0;
   -webkit-font-smoothing: antialiased;
+  padding: 6px 18px;
 }
 #zip {
   width: 60%;
