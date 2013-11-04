@@ -18,7 +18,7 @@ body {
   margin-bottom: 24px;
 }
 .form-group {
-  overflow: auto;
+  overflow: visible;
 }
 legend {
   margin-bottom: 10px;
@@ -61,4 +61,37 @@ label {
 }
 .input input:focus .placeholder {
   display: none;
+}
+label.error {
+  cursor: default;
+  list-style: none;
+  white-space: nowrap;
+  color: white;
+  background: #ac0000;
+  position: absolute;
+  padding: 0 10px;
+  line-height: 2;
+  font-size: 14px;
+  left: 15px;
+  top: -30px;
+  border-radius: 2px;
+  z-index: 10;
+}
+label.error:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid;
+  border-color: #ac0000 transparent transparent transparent;
+  left: 15%;
+  top: 28px;
+  margin-left: -8px;
+}
+.btn {
+  border-radius: 0;
+  -webkit-font-smoothing: antialiased;
+}
+#zip {
+  width: 60%;
 }
