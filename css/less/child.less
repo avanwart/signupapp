@@ -2,7 +2,6 @@
 @blue:  #68c9eb;
 
 body {
-	-webkit-font-smoothing: antialiased;
 	font-family: 'Droid Sans', sans-serif;
 	background: #efefef;
 	padding-top: 100px;
@@ -28,7 +27,6 @@ legend {
 	margin-bottom: 10px;
 }
 label {
-	-webkit-font-smoothing: antialiased;
 	font-weight: normal;
 }
 .input {
@@ -36,23 +34,19 @@ label {
 	width: 100%;
 	.placeholder {
 		position: absolute;
-		font-family: 'Ubuntu', sans-serif;
 		font-weight: normal;
 		padding: 8px 12px 6px 13px;
 		color: #bababa;
 		z-index: 1;
 		cursor: text;
 		pointer-events: none;
-		-webkit-font-smoothing: antialiased;
 	}
 	input {
 		width: 100%;
-		font-family: 'Ubuntu', sans-serif;
 		font-weight: normal;
 		padding: 7px 12px 6px 12px;
 		border: 1px solid @grey;
 		background-color: #f6f6f6;
-		-webkit-font-smoothing: antialiased;
 		box-shadow: none;
 		&:focus {
 			outline: none;
@@ -101,4 +95,19 @@ label.error:after {
 }
 #zip {
 	width: 60%;
+}
+
+.twirl {
+	-webkit-transition: all 100s linear;
+	-moz-transition: all 100s linear;
+	-ms-transition: all 100s linear;
+	-o-transition: all 100s linear;
+	transition: all 100s linear;
+}
+.twirl.active {
+	-webkit-transform: rotate(1080deg);
+	-moz-transform: rotate(1080deg);
+	-o-transform: rotate(1080deg);
+	-ms-transform: rotate(1080deg);
+	transform: rotate(1080deg);
 }
